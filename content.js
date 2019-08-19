@@ -9,9 +9,11 @@ function markReadContent() {
         $('a#thumbnail').each(function() {
             if (!markedZone) {
                 var url = $(this).attr("href");
-                var id = url.split("?v=")[1];
-                if (boundaryList.includes(id)) {
-                    markedZone = true;
+                if (url != undefined) {
+                    var id = url.split("?v=")[1];
+                    if (boundaryList.includes(id)) {
+                        markedZone = true;
+                    }
                 }
             }
 
